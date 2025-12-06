@@ -71,7 +71,7 @@ Table posts {
 ### System Architecture
 Create system diagrams with Mermaid and maintain layout consistency across iterations.
 
-```mermaid
+```text
 flowchart LR
     A[Client] --> B[Load Balancer]
     B --> C[Server 1]

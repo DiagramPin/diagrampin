@@ -93,7 +93,7 @@ Keep your documentation diagrams clean and consistent with locked layouts.
 
 ---
 
-## 📸 Screenshots
+## 🎬 Demo GIF
 
 ### DBML Editor
 ![DBML Demo](docs/screenshots/dbml-demo.gif)

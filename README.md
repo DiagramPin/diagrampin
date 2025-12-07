@@ -1,17 +1,11 @@
 # 📍 DiagramPin
 
-> **Pin Your Diagram Layouts in Code**
-
-## 🌐 Live Demo
-
-**👉 Try it now: [https://diagrampin.com](https://diagrampin.com)**
-
-## 💡 Core Concept
-
-> **"Manage positions in code!"**
+> **A diagram editor that saves layout positions directly in your code.**
 >
-> Drag nodes → `@layout` auto-updates.
-> Version control your layouts with Git!
+> Drag nodes → `@layout` comments auto-update.
+> Version control your diagram layouts with Git!
+
+**🌐 Try it now: [diagrampin.com](https://diagrampin.com)**
 
 ## 🎬 Demo
 

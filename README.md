@@ -9,8 +9,8 @@
 
 ## 🎬 Demo
 
-| DBML Editor | Mermaid Editor |
-|:-----------:|:--------------:|
+| | |
+|:-:|:-:|
 | ![DBML Demo](docs/screenshots/dbml-demo.gif) | ![Mermaid Demo](docs/screenshots/mermaid-demo.gif) |
 
 Drag nodes → `@layout` auto-updates in your code!

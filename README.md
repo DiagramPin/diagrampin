@@ -2,31 +2,24 @@
 
 > **Pin Your Diagram Layouts in Code**
 
----
-
 ## 🌐 Live Demo
 
 **👉 Try it now: [https://diagrampin.com](https://diagrampin.com)**
-
----
 
 ## 💡 Core Concept
 
 > **"Manage positions in code!"**
 >
-> Drag tables → `@layout` auto-updates.
+> Drag nodes → `@layout` auto-updates.
 > Version control your layouts with Git!
-
----
 
 ## 🎬 Demo
 
 | DBML Editor | Mermaid Editor |
 |:-----------:|:--------------:|
 | ![DBML Demo](docs/screenshots/dbml-demo.gif) | ![Mermaid Demo](docs/screenshots/mermaid-demo.gif) |
-| Drag tables → @layout auto-update | ER diagram positioning |
 
----
+Drag nodes → `@layout` auto-updates in your code!
 
 ## ✨ Features
 
@@ -43,31 +36,10 @@ DiagramPin adds **position locking** to code-rendered diagrams.
 | **DBML** | Database Markup | ERD, Schema Design |
 | **Mermaid** | Diagram as Code | Flowcharts, ER, Sequence |
 
----
+## 💬 Feedback
 
-## 🚀 Quick Example
+We'd love to hear from you!
 
-```dbml
-// @layout x:100 y:100
-Table users {
-  id integer [pk]
-  email varchar
-}
+Whether it's a **new feature request**, **improvement idea**, or **bug report** — all feedback is always greatly appreciated and welcome!
 
-// @layout x:400 y:100
-Table posts {
-  id integer [pk]
-  user_id integer [ref: > users.id]
-}
-```
-
----
-
-## ⚠️ Note
-
-> This repository is for **issue tracking only**.
-> Source code is maintained in a private repository.
-
-Bug reports and feature requests are welcome!
-
-👉 **[Open an Issue](https://github.com/DiagramPin/diagrampin/issues)**
+👉 **[Submit your feedback here!](https://github.com/DiagramPin/diagrampin/issues)**

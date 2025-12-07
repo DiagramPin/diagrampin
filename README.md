@@ -14,6 +14,24 @@ Experience the power of position-locked diagrams directly in your browser!
 
 ---
 
+## 💡 핵심 컨셉
+
+> **"코드로 위치까지 관리하세요!"**
+>
+> 테이블을 드래그하면 `@layout` 주석이 자동 업데이트됩니다.
+> Git으로 다이어그램 레이아웃까지 버전 관리하세요!
+
+---
+
+## 🎬 Demo
+
+| DBML Editor | Mermaid Editor |
+|:-----------:|:--------------:|
+| ![DBML Demo](docs/screenshots/dbml-demo.gif) | ![Mermaid Demo](docs/screenshots/mermaid-demo.gif) |
+| 테이블 드래그 → `@layout` 자동 업데이트 | ER 다이어그램 위치 조정 |
+
+---
+
 ## ✨ Features
 
 ### 📌 Position Locking
@@ -21,7 +39,7 @@ Experience the power of position-locked diagrams directly in your browser!
 - Positions persist across code changes and team collaboration
 - Never lose your carefully arranged diagram layout again
 
-### 🎯 DBML Support
+### 🗃️ DBML Support
 - Full Database Markup Language support
 - Visualize database schemas as Entity-Relationship Diagrams
 - Perfect for database design and documentation
@@ -31,7 +49,7 @@ Experience the power of position-locked diagrams directly in your browser!
 - Complete Mermaid syntax support
 - Ideal for system architecture and process flows
 
-### 💾 Auto Save
+### ⚡ Auto Save
 - Automatic layout persistence
 - No manual save required
 - Seamless editing experience
@@ -93,19 +111,7 @@ Keep your documentation diagrams clean and consistent with locked layouts.
 
 ---
 
-## 🎬 Demo GIF
-
-### DBML Editor
-![DBML Demo](docs/screenshots/dbml-demo.gif)
-*Design database schemas with automatic ERD generation and position locking*
-
-### Mermaid Editor
-![Mermaid Demo](docs/screenshots/mermaid-demo.gif)
-*Create flowcharts and diagrams with maintained layouts*
-
----
-
-## 🎯 Why DiagramPin?
+## 💡 Why DiagramPin?
 
 Most diagram tools don't preserve your carefully arranged layouts when you update the code. DiagramPin solves this by:
 
@@ -125,41 +131,14 @@ Most diagram tools don't preserve your carefully arranged layouts when you updat
 
 ---
 
-## 📖 Documentation
+## ⚠️ 안내
 
-- **Website**: [https://diagrampin.com](https://diagrampin.com)
-- **Live Editor**: Try it instantly without installation
-- **Examples**: See sample diagrams on the website
+> 이 저장소는 **프로젝트 정보 및 이슈 추적용**으로만 사용됩니다.
+> 실제 소스 코드는 private repository에서 관리됩니다.
 
----
+버그 리포트, 기능 요청, 피드백은 환영합니다!
 
-## 💬 Feedback & Support
-
-### Report Issues
-Found a bug or have a feature request? [Open an issue](https://github.com/DiagramPin/diagrampin/issues)
-
-### Questions
-Have questions? [Ask in Discussions](https://github.com/DiagramPin/diagrampin/discussions)
-
----
-
-## ⚠️ Note
-
-This repository is for **project information and issue tracking only**. The actual source code is maintained in a private repository.
-
-**We do not accept pull requests** for code contributions. However, we welcome:
-- 🐛 Bug reports
-- ✨ Feature requests
-- 📖 Documentation improvements
-- 💬 General questions and feedback
-
----
-
-## 🔗 Links
-
-- 🌐 **Live Demo**: [https://diagrampin.com](https://diagrampin.com)
-- 📧 **Issues**: [GitHub Issues](https://github.com/DiagramPin/diagrampin/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/DiagramPin/diagrampin/discussions)
+👉 **[GitHub Issues에서 이슈 등록하기](https://github.com/DiagramPin/diagrampin/issues)**
 
 ---
 

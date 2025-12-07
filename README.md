@@ -17,11 +17,12 @@ Drag nodes → `@layout` auto-updates in your code!
 
 ## ✨ Features
 
-DiagramPin adds **position locking** to code-rendered diagrams.
+Just use it — `@layout` comments auto-update as you drag.
+No extra setup. Position locking works out of the box.
 
-- 📌 Drag nodes → positions auto-save to code as `@layout` comments
-- 🔄 Bidirectional sync between code and diagram
-- 📦 Version control your layouts with Git
+- Drag nodes → positions auto-save to code
+- Bidirectional sync between code and diagram
+- Version control your layouts with Git
 
 ### Supported Formats
 

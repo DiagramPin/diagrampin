@@ -1,9 +1,9 @@
 # 📍 DiagramPin
 
-> **A diagram editor that saves layout positions directly in your code.**
->
-> Drag nodes → `@layout` comments auto-update.
-> Version control your diagram layouts with Git!
+**A diagram editor that saves layout positions directly in your code.**
+
+Drag nodes → `@layout` comments auto-update.
+Version control your diagram layouts with Git!
 
 **🌐 Try it now: [diagrampin.com](https://diagrampin.com)**
 

@@ -9,7 +9,7 @@
 
 ## 🎬 Demo
 
-| | |
+| DBML | Mermaid |
 |:-:|:-:|
 | ![DBML Demo](docs/screenshots/dbml-demo.gif) | ![Mermaid Demo](docs/screenshots/mermaid-demo.gif) |
 

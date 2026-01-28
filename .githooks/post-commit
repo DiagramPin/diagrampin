@@ -22,6 +22,7 @@ print(os.path.relpath(current, parent))
 echo ""
 echo "[post-commit] 부모 repo 포인터 업데이트 중..."
 cd "$PARENT_REPO"
+unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
 git add "$SUBMODULE_REL"
 git commit -m "chore: update submodule $SUBMODULE_REL" || true
 echo "[post-commit] 완료!"

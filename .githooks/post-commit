@@ -11,8 +11,13 @@ if [ -z "$PARENT_REPO" ]; then
     exit 0
 fi
 
-# macOS 호환: Python으로 상대 경로 계산
-SUBMODULE_REL=$(python3 -c "import os; print(os.path.relpath('$(pwd)', '$PARENT_REPO'))")
+# macOS 호환: Python으로 심볼릭 링크 해제 후 상대 경로 계산
+SUBMODULE_REL=$(python3 -c "
+import os
+parent = os.path.realpath('$PARENT_REPO')
+current = os.path.realpath(os.getcwd())
+print(os.path.relpath(current, parent))
+")
 
 echo ""
 echo "[post-commit] 부모 repo 포인터 업데이트 중..."

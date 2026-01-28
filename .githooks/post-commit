@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# ============================================
+# DiagramPin post-commit Hook
+# 커밋 후 부모 repo(solodev_root) 포인터 자동 업데이트
+# ============================================
+
+PARENT_REPO=$(git rev-parse --show-superproject-working-tree 2>/dev/null)
+
+if [ -z "$PARENT_REPO" ]; then
+    exit 0
+fi
+
+SUBMODULE_REL=$(realpath --relative-to="$PARENT_REPO" "$(pwd)")
+
+echo ""
+echo "[post-commit] 부모 repo 포인터 업데이트 중..."
+cd "$PARENT_REPO"
+git add "$SUBMODULE_REL"
+git commit -m "chore: update submodule $SUBMODULE_REL"
+echo "[post-commit] 완료!"

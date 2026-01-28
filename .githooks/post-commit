@@ -11,11 +11,12 @@ if [ -z "$PARENT_REPO" ]; then
     exit 0
 fi
 
-SUBMODULE_REL=$(realpath --relative-to="$PARENT_REPO" "$(pwd)")
+# macOS 호환: Python으로 상대 경로 계산
+SUBMODULE_REL=$(python3 -c "import os; print(os.path.relpath('$(pwd)', '$PARENT_REPO'))")
 
 echo ""
 echo "[post-commit] 부모 repo 포인터 업데이트 중..."
 cd "$PARENT_REPO"
 git add "$SUBMODULE_REL"
-git commit -m "chore: update submodule $SUBMODULE_REL"
+git commit -m "chore: update submodule $SUBMODULE_REL" || true
 echo "[post-commit] 완료!"

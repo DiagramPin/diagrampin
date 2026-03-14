@@ -75,7 +75,7 @@ If you just want to use DiagramPin right now:
 
 ---
 
-## CLI Quick Start (Public)
+## CLI Quick Start
 
 Install the CLI:
 
@@ -83,21 +83,57 @@ Install the CLI:
 npm install -g diagrampin
 ```
 
-Quick usage:
+### Full layout automation in 3 commands
 
 ```bash
+# 1. Analyze your schema
 diagrampin analyze schema.dbml
-diagrampin layout plan schema.dbml --strategy group-aware
-diagrampin layout apply schema.dbml
+
+# 2. Auto-layout and save to sidecar state file
+diagrampin layout apply schema.dbml --strategy group-aware
+
+# 3. Write positions back into DBML @layout comments
 diagrampin layout export-inline schema.dbml
 ```
 
-### Agent-friendly automation
+### All commands
 
-- JSON output is the default contract (`ok`, `schemaVersion`, `command`, `data`)
-- `plan` vs `apply` keeps dry-run safe for automation
-- Built-in checkpoints + undo
-- stdin supported with `-`
+| Command | Action | Modifies files? |
+|---------|--------|:---:|
+| `analyze <file>` | Parse schema, return metadata | No |
+| `group plan <file>` | Suggest table groupings | No |
+| `group promote <file>` | Promote clusters to DBML TableGroup | Yes (DBML) |
+| `layout plan <file>` | Preview layout positions | No |
+| `layout validate <file>` | Check layout quality | No |
+| `layout apply <file>` | Compute and save positions | Yes (sidecar) |
+| `layout import-inline <file>` | Import @layout into sidecar | Yes (sidecar) |
+| `layout export-inline <file>` | Export sidecar to @layout | Yes (DBML) |
+| `layout checkpoints <file>` | List recovery points | No |
+| `layout undo <file>` | Restore from checkpoint | Yes (sidecar) |
+
+### Sidecar state file
+
+`layout apply` creates a `schema.diagrampin.json` next to your DBML file. This stores table positions, visual clusters, and constraints. **Commit it to Git** for reproducible layouts.
+
+```
+project/
+├── schema.dbml
+└── schema.diagrampin.json   ← layout state (Git-tracked)
+```
+
+Layout source priority: `sidecar > inline @layout > auto-layout`
+
+### Agent-friendly design
+
+DiagramPin CLI is built for LLM agents and automation pipelines:
+
+- **Structured JSON output** — every command returns `{ ok, schemaVersion, command, data }`, parseable with `JSON.parse(stdout)`
+- **Dry-run separation** — `plan` commands preview without writing; `apply` commands write with auto-checkpoint
+- **Built-in undo** — every write creates a checkpoint, recoverable via `layout undo`
+- **stdin support** — pipe DBML content with `-` as file path: `cat schema.dbml | diagrampin analyze -`
+- **Consistent error format** — failures return `{ ok: false, error: { code, message } }` with exit code 1
+
+> For detailed command options and JSON output examples, see the [CLI documentation on npm](https://www.npmjs.com/package/diagrampin).
 
 ---
 
